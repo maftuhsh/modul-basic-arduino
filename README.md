@@ -1,12 +1,14 @@
-📘 Modul Arduino & IoT untuk Pemula — Dari Nol Banget
-1. Dasar Pemrograman Arduino (Bahasa C++ untuk Pemula)
+# 📘 Modul Belajar Arduino & IoT (Fundamental Pemrograman dari Nol)
 
-Sebelum kita bikin project IoT, kita harus ngerti dulu “bahasa” yang dipakai Arduino, yaitu C++ versi sederhana.
+> Modul ini ditulis untuk **pemula banget** yang bahkan belum pernah ngoding.  
+> Setelah membaca ini kamu akan paham dasar **bahasa C++ di Arduino**, dan siap lanjut ke latihan hardware & IoT.
 
-1.1 Struktur Program Arduino
+---
 
-Setiap program Arduino minimal punya dua bagian:
+## 🔹 1. Struktur Program Arduino
+Program Arduino selalu punya **dua bagian utama**:
 
+```cpp
 void setup() {
   // Bagian ini jalan SEKALI saat Arduino pertama kali nyala
 }
@@ -14,33 +16,39 @@ void setup() {
 void loop() {
   // Bagian ini jalan BERULANG-ULANG tanpa henti
 }
+```
 
+- `setup()` → untuk persiapan awal (set pin, mulai komunikasi, dll).  
+- `loop()` → untuk perintah utama yang terus diulang.
 
-🔹 setup() = Persiapan awal (misalnya: set pin jadi input/output, mulai komunikasi serial).
-🔹 loop() = Program utama, yang akan jalan terus.
+---
 
-1.2 Variabel
+## 🔹 2. Variabel & Tipe Data
+Variabel = tempat untuk menyimpan data.
 
-Variabel = tempat menyimpan data di memori.
-Contoh:
-
-int umur = 18;        // angka bulat
-float suhu = 25.5;    // angka desimal
+```cpp
+int umur = 18;        // bilangan bulat
+float suhu = 25.5;    // bilangan desimal
 char huruf = 'A';     // karakter tunggal
-String nama = "Budi"; // teks (string)
+String nama = "Budi"; // teks
+bool hidup = true;    // logika (true/false)
+```
 
-1.3 Tipe Data Penting
-Tipe Data	Contoh	Keterangan
-int	10	Bilangan bulat (-32k s/d 32k)
-long	100000	Bilangan bulat lebih besar
-float	3.14	Bilangan desimal
-char	'A'	Karakter tunggal
-String	"Halo"	Teks panjang
-bool	true / false	Logika benar/salah
-1.4 Operator Dasar
+| Tipe Data | Contoh     | Keterangan                          |
+|-----------|------------|-------------------------------------|
+| `int`     | 10         | bilangan bulat (-32k sampai 32k)    |
+| `long`    | 100000     | bilangan bulat lebih besar          |
+| `float`   | 3.14       | bilangan desimal                    |
+| `char`    | 'A'        | karakter tunggal                    |
+| `String`  | "Halo"     | teks panjang                        |
+| `bool`    | true/false | logika benar/salah                  |
 
-Operator = simbol untuk hitung/membandingkan.
+---
 
+## 🔹 3. Operator Dasar
+Operator digunakan untuk menghitung atau membandingkan.
+
+```cpp
 int a = 10;
 int b = 3;
 
@@ -50,26 +58,31 @@ int kali   = a * b;   // 30
 int bagi   = a / b;   // 3
 int sisa   = a % b;   // 1
 
-bool lebihBesar = a > b; // true
+bool lebihBesar = a > b;  // true
 bool sama       = a == b; // false
+```
 
-1.5 Kondisi (if/else)
+---
 
-Dipakai untuk mengambil keputusan.
+## 🔹 4. Kondisi (if/else)
+Dipakai untuk membuat keputusan.
 
+```cpp
 int suhu = 30;
 
 if (suhu > 28) {
-  // kalau suhu lebih dari 28
   Serial.println("Panas!");
 } else {
   Serial.println("Normal.");
 }
+```
 
-1.6 Perulangan (loop)
+---
 
-Untuk mengulang perintah.
+## 🔹 5. Perulangan (Loop)
+Untuk mengulang perintah beberapa kali.
 
+```cpp
 // For loop
 for (int i = 0; i < 5; i++) {
   Serial.println(i);  // cetak 0 sampai 4
@@ -81,11 +94,14 @@ while (j < 5) {
   Serial.println(j);
   j++;
 }
+```
 
-1.7 Fungsi
+---
 
+## 🔹 6. Fungsi
 Fungsi = blok kode yang bisa dipanggil berkali-kali.
 
+```cpp
 int kaliDua(int x) {
   return x * 2;
 }
@@ -94,29 +110,28 @@ void loop() {
   int hasil = kaliDua(5); // hasil = 10
   Serial.println(hasil);
 }
+```
 
-1.8 Input & Output Arduino
+---
 
-Arduino bisa:
+## 🔹 7. Input & Output Arduino
+Arduino bisa **membaca** (input) dan **mengendalikan** (output) pin.
 
-Output → memberi sinyal (nyalain LED, jalanin motor)
-
-Input → membaca sensor (tombol, suhu, cahaya)
-
-Perintah dasarnya:
-
+```cpp
 pinMode(pin, OUTPUT);          // set pin jadi output
 pinMode(pin, INPUT);           // set pin jadi input
 digitalWrite(pin, HIGH/LOW);   // kasih sinyal nyala/mati
-digitalRead(pin);              // baca input tombol
+digitalRead(pin);              // baca tombol (HIGH/LOW)
 analogRead(pin);               // baca sensor analog (0-1023)
 analogWrite(pin, nilai);       // kasih PWM (0-255)
+```
 
-2. Contoh Latihan Dasar Pemrograman (Tanpa Rangkaian)
+---
 
-Sekarang kita gabungkan konsep di atas ke contoh yang simpel:
+## 🔹 8. Latihan Dasar (Tanpa Rangkaian)
 
-2.1 Cetak teks ke Serial Monitor
+### 8.1 Cetak teks ke Serial Monitor
+```cpp
 void setup() {
   Serial.begin(9600); // mulai komunikasi serial
 }
@@ -125,11 +140,14 @@ void loop() {
   Serial.println("Halo, Arduino!");
   delay(1000); // tunggu 1 detik
 }
-
+```
 
 👉 Hasil: tiap 1 detik muncul teks di Serial Monitor.
 
-2.2 Variabel + If
+---
+
+### 8.2 Variabel + If
+```cpp
 void setup() {
   Serial.begin(9600);
 }
@@ -144,11 +162,12 @@ void loop() {
   }
   delay(1000);
 }
+```
 
+---
 
-👉 Hasil: selalu cetak "Panas!" karena suhu = 32.
-
-2.3 Perulangan For
+### 8.3 Perulangan For
+```cpp
 void setup() {
   Serial.begin(9600);
 }
@@ -159,6 +178,20 @@ void loop() {
     delay(500);
   }
 }
-
+```
 
 👉 Hasil: angka 1–5 muncul di Serial Monitor.
+
+---
+
+## 🎯 Kesimpulan
+- Program Arduino terdiri dari `setup()` dan `loop()`.  
+- Kamu bisa menyimpan data dengan **variabel**.  
+- Gunakan **if/else** untuk keputusan.  
+- Gunakan **loop** untuk pengulangan.  
+- Gunakan **fungsi** agar kode lebih rapi.  
+- Arduino bisa **input** (sensor) dan **output** (LED, motor, dsb).
+
+👉 Setelah paham fundamental ini, kita bisa lanjut ke **Hardware Dasar** (LED, tombol, sensor) lalu ke **IoT (WiFi, MQTT, HTTP)**.
+
+---
