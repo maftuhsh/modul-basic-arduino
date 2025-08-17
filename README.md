@@ -1,4 +1,7 @@
 # 📘 Modul Belajar Arduino & IoT (Fundamental Pemrograman dari Nol)
+- tujuanku membuat ini adalah memperkenalkan Arduino dari nol: apa itu Arduino, komponen utamanya, dan bagaimana memulai penggunaannya. Ini merupakan titik awal yang sempurna untuk pemula yang belum pernah bersentuhan dengan elektronika atau pemrograman.
+
+- Arduino sendiri adalah platform mikrokontroler open-source yang bisa diprogram pakai bahasa C/C++ sederhana. Papan paling umum, Arduino Uno, dilengkapi berbagai pin input/output (digital & analog), dan mudah dihubungkan ke komputer lewat USB untuk pengunggahan kode dan debugging.
 
 ## 🤔 Apa itu Arduino?
 
@@ -86,6 +89,3 @@ void loop() {
 - Arduino Uno—board paling umum—memiliki 14 pin digital (6 mampu PWM), 6 pin analog, disuplai oleh mikrokontroler ATmega328P, dan bisa dihubungkan ke komputer via USB untuk pengunggahan kode
 
 
-# memperkenalkan Arduino dari nol: apa itu Arduino, komponen utamanya, dan bagaimana memulai penggunaannya. Ini merupakan titik awal yang sempurna untuk pemula yang belum pernah bersentuhan dengan elektronika atau pemrograman.
-
-# Arduino sendiri adalah platform mikrokontroler open-source yang bisa diprogram pakai bahasa C/C++ sederhana. Papan paling umum, Arduino Uno, dilengkapi berbagai pin input/output (digital & analog), dan mudah dihubungkan ke komputer lewat USB untuk pengunggahan kode dan debugging.
