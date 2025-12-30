@@ -165,3 +165,4 @@ Setelah IDE terpasang, kamu siap lanjut ke tutorial berikutnya seperti menghubun
 - Arduino Uno—board paling umum—memiliki 14 pin digital (6 mampu PWM), 6 pin analog, disuplai oleh mikrokontroler ATmega328P, dan bisa dihubungkan ke komputer via USB untuk pengunggahan kode
 
 
+https://www.youtube.com/watch?v=fFxpZltvmm0&list=PLH58vgh-ncjXpGVtwFPllYirfZ1IV4Dd4&index=2
